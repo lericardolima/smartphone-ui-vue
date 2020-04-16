@@ -1,6 +1,6 @@
 <template>
   <div id="app" class="col-md-10 col-xl-8 m-auto">
-    <app-header></app-header>
+    <app-header :title="title"></app-header>
     <router-view></router-view>
   </div>
 </template>
@@ -9,6 +9,11 @@
 import Header from './components/Header.vue'
 
 export default {
+  data() {
+    return {
+      title: 'Claro Smartphones'
+    }
+  },
   components: {
     'app-header': Header
   }
